@@ -12,7 +12,7 @@ import org.json.JSONException
 import org.json.JSONObject
 
 /**
- * 一行代码快速实现 Bean 和 Json 之间的相互转换。
+ * Description：一行代码快速实现 Bean 和 Json 之间的相互转换。
  */
 
 fun gsonJsonObjectOf(vararg args: Pair<String, Any?>) = JsonObject().append(*args)
