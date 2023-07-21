@@ -49,6 +49,9 @@ fun View.onDebounceClick(wait: Long = 200, block: ((View) -> Unit)) {
     setOnClickListener(debounceClick(wait, block))
 }
 
+/**
+ * wait 秒内点击一次
+ */
 fun throttleClick(wait: Long = 200, block: ((View) -> Unit)): View.OnClickListener {
 
     return View.OnClickListener { v ->
@@ -61,6 +64,9 @@ fun throttleClick(wait: Long = 200, block: ((View) -> Unit)): View.OnClickListen
     }
 }
 
+/**
+ * wait 秒防抖
+ */
 fun debounceClick(wait: Long = 200, block: ((View) -> Unit)): View.OnClickListener {
     return View.OnClickListener { v ->
         var action = (v.getTag(R.id.click_debounce_action) as? DebounceAction)
