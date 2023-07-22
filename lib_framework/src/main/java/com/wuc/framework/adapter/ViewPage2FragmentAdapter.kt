@@ -1,4 +1,4 @@
-package com.wuc.framework.base
+package com.wuc.framework.adapter
 
 import android.util.SparseArray
 import androidx.fragment.app.Fragment
