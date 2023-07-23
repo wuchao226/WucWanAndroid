@@ -93,5 +93,6 @@ dependencies {
   implementation project(path: ':lib_framework')
   implementation project(path: ':lib_common')
   implementation project(path: ':lib_banner')
+  implementation project(path: ':lib_glide')
 
 }
