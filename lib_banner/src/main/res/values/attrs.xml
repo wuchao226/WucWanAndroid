@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <declare-styleable name="IndicatorView">
+
+    <attr name="vpi_slider_checked_color" format="color" />
+    <attr name="vpi_slider_normal_color" format="color" />
+    <attr name="vpi_slider_radius" format="dimension" />
+    <attr name="vpi_rtl" format="boolean" />
+
+    <attr name="vpi_orientation" format="enum">
+      <enum name="horizontal" value="0" />
+      <enum name="vertical" value="1" />
+      <enum name="rtl" value="3" />
+    </attr>
+
+    <attr name="vpi_slide_mode" format="enum">
+      <enum name="normal" value="0" />
+      <enum name="smooth" value="2" />
+      <enum name="worm" value="3" />
+      <enum name="scale" value="4" />
+      <enum name="color" value="5" />
+    </attr>
+
+    <attr name="vpi_style" format="enum">
+      <enum name="circle" value="0" />
+      <enum name="dash" value="2" />
+      <enum name="round_rect" value="4" />
+    </attr>
+
+  </declare-styleable>
+  <declare-styleable name="BannerViewPager">
+    <!--页面切换时间间隔-->
+    <attr name="bvp_interval" format="integer" />
+    <attr name="bvp_scroll_duration" format="integer" />
+    <attr name="bvp_can_loop" format="boolean" />
+    <attr name="bvp_auto_play" format="boolean" />
+    <attr name="bvp_indicator_checked_color" format="color" />
+    <attr name="bvp_indicator_normal_color" format="color" />
+    <attr name="bvp_indicator_radius" format="dimension" />
+    <attr name="bvp_round_corner" format="dimension" />
+    <attr name="bvp_page_margin" format="dimension" />
+    <attr name="bvp_reveal_width" format="dimension" />
+    <attr name="bvp_indicator_style" format="enum">
+      <enum name="circle" value="0" />
+      <enum name="dash" value="2" />
+      <enum name="round_rect" value="4" />
+    </attr>
+    <attr name="bvp_indicator_slide_mode" format="enum">
+      <enum name="normal" value="0" />
+      <enum name="smooth" value="2" />
+      <enum name="worm" value="3" />
+      <enum name="scale" value="4" />
+      <enum name="color" value="5" />
+    </attr>
+    <attr name="bvp_indicator_gravity" format="enum">
+      <enum name="center" value="0" />
+      <enum name="start" value="2" />
+      <enum name="end" value="4" />
+    </attr>
+    <attr name="bvp_page_style" format="enum">
+      <enum name="normal" value="0" />
+      <enum name="multi_page" value="2" />
+      <enum name="multi_page_overlap" value="4" />
+      <enum name="multi_page_scale" value="8" />
+    </attr>
+    <attr name="bvp_indicator_visibility" format="enum">
+      <enum name="visible" value="0" />
+      <enum name="invisible" value="4" />
+      <enum name="gone" value="8" />/>
+    </attr>
+
+  </declare-styleable>
+</resources>

@@ -91,5 +91,7 @@ dependencies {
   implementation rootProject.depsLibs.rxandroid
 
   implementation project(path: ':lib_framework')
+  implementation project(path: ':lib_common')
+  implementation project(path: ':lib_banner')
 
 }

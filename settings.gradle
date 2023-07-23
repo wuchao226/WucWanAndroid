@@ -17,3 +17,5 @@ dependencyResolutionManagement {
 rootProject.name = "WucWanAndroid"
 include ':app'
 include ':lib_framework'
+include ':lib_common'
+include ':lib_banner'
