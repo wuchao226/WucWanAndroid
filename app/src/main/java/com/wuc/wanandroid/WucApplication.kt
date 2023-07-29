@@ -10,6 +10,12 @@ import com.wuc.framework.manager.ActivityManager
 import com.wuc.framework.manager.AppFrontBack
 import com.wuc.framework.manager.AppFrontBackListener
 import com.wuc.framework.toast.TipsToast
+import com.wuc.start.dispatcher.TaskDispatcher
+import com.wuc.wanandroid.task.InitARouterTask
+import com.wuc.wanandroid.task.InitAppManagerTask
+import com.wuc.wanandroid.task.InitHelperTask
+import com.wuc.wanandroid.task.InitMmkvTask
+import com.wuc.wanandroid.task.InitRefreshLayoutTask
 
 /**
  * @author     wuchao
@@ -29,6 +35,20 @@ class WucApplication : Application() {
         // App启动立即注册监听
         registerActivityLifecycle()
         TipsToast.init(this)
+
+        //1.启动器：TaskDispatcher初始化
+        TaskDispatcher.init(this)
+        //2.创建dispatcher实例
+        val dispatcher: TaskDispatcher = TaskDispatcher.createInstance()
+        //3.添加任务并且启动任务
+        dispatcher.addTask(InitHelperTask(this))
+            .addTask(InitMmkvTask())
+            .addTask(InitAppManagerTask())
+            .addTask(InitRefreshLayoutTask())
+            .addTask(InitARouterTask())
+            .start()
+        //4.等待，需要等待的方法执行完才可以往下执行
+        dispatcher.await()
     }
 
     /**
@@ -45,6 +65,7 @@ class WucApplication : Application() {
             }
         })
     }
+
     /**
      * 注册Activity生命周期监听
      */

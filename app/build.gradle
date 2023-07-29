@@ -96,5 +96,6 @@ dependencies {
   implementation project(path: ':lib_glide')
   implementation project(path: ':lib_network')
   implementation project(path: ':lib_room')
+  implementation project(path: ':lib_start')
 
 }
