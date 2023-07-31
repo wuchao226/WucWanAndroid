@@ -11,7 +11,7 @@ import com.wuc.common.service.IUserService
 /**
  * @author     wuchao
  * @date       2023/7/24 00:31
- * @desciption  UserService提供类，对外提供相关能力
+ * @desciption  UserService 提供类，对外提供相关能力
  * 任意模块就能通过UserServiceProvider使用对外暴露的能力
  */
 object UserServiceProvider {
